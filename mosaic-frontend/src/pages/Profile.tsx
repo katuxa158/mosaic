@@ -4,7 +4,7 @@ import Button from "../components/Button/Button.tsx";
 import {useNavigate} from "react-router-dom";
 import styles from "../components/PostGrid.module.css";
 import PostCard from "../components/PostCard.tsx";
-import {getPosts} from "../api/posts.ts";
+import {getPosts, deletePost} from "../api/posts.ts";
 
 export default function Profile() {
     const [user, setUser] = useState<any>()
@@ -27,7 +27,17 @@ export default function Profile() {
             <Button onClick={() => navigate("/create")}>Добавить пост</Button>
             <h2>Мои посты</h2>
             <div className={styles.container}>
-                {posts.filter(value => value.author === user.id).map((p: any) => <PostCard key={p.id} post={p}/>)}
+                {posts.filter(value => value.author === user.id).map((p: any) => <div className={styles.card} key={p.id}>
+                     <img onClick={() => navigate(`/posts/${p.id}`)} src={p.image} className={styles.cover} alt={"Post"}/>
+                    <Button onClick={() => {
+                         deletePost(p.id).then(r => {
+                             console.log(r.status)
+                             if (r.status === 204) {
+                                 window.location.reload()
+                             }
+                         })
+                    }}>Удалить</Button>
+                </div>)}
             </div>
 
         </div>
