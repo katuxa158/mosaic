@@ -15,7 +15,7 @@ export default function PostPage() {
     return (
         <div>
             <h1>{post.title}</h1>
-            <img src={post.image}/>
+            <img width="400px" src={post.image}/>
             <p>{post.content}</p>
             <button onClick={() => likePost(post.id)}>👍 {post.likes_count}</button>
             <button onClick={() => dislikePost(post.id)}>👎 {post.dislikes_count}</button>
