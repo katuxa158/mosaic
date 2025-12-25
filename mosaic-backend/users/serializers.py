@@ -19,7 +19,7 @@ class AdminUserSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'username', 'full_name', 'avatar', 'posts_count', 'is_online')
+        fields = ('id', 'role', 'username', 'full_name', 'avatar', 'posts_count', 'is_online')
 
 
 class RegisterSerializer(serializers.ModelSerializer):
