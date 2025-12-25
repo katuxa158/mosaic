@@ -38,7 +38,7 @@ export default function ImageCropper({image, onCropComplete}: Props) {
                 />
             </div>
             <Button onClick={finishCrop}>
-                Apply crop
+                Применить изменения
             </Button>
         </div>
     )
