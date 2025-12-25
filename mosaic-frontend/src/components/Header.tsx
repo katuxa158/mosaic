@@ -10,7 +10,6 @@ export default function Header() {
             <div className={styles.menu}>
                 <Link to="/">Mosaic</Link>
                 {isAuth() && <Link to="/profile">Профиль</Link>}
-                <Input placeholder="Поиск..."></Input>
             </div>
             <div className={styles.end}>
                 {!isAuth() && <Link to="/login">Войти</Link>}

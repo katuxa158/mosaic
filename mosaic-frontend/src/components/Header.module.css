@@ -1,9 +1,11 @@
 .header {
+    height: 50px;
+    background-color: var(--color-black);
     display: flex;
      align-items: center;
     justify-content: space-between;
-    /*background-color: var(--color-black);*/
     margin-bottom: 20px;
+     padding: 0 40px 0 40px;
 }
 
 .header:last-child {
@@ -16,10 +18,12 @@
     gap: 1rem;
 }
 
-.menu a {
+a {
     text-decoration: none;
+    color: var(--color-white);
 }
 
-.menu a:hover {
-    color: black;
+a:hover {
+    color: var(--color-white);
+    text-decoration: underline;
 }
