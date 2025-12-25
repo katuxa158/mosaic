@@ -27,5 +27,8 @@
 
 html, body {
     margin: 0;
-    padding: 0 40px 0 40px;
+}
+
+main {
+     padding: 0 40px 0 40px;
 }
