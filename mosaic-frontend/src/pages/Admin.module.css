@@ -9,7 +9,7 @@
 .customTable {
     width: 100%;
     border-collapse: collapse;
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: Consolas, system-ui, -apple-system, sans-serif;
     font-size: 14px;
 }
 
