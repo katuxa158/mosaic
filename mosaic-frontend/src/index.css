@@ -1,0 +1,31 @@
+:root {
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray: #a7a7a7;
+
+    --radius-sm: 4px;
+    --radius-md: 8px;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --space-5: 32px;
+
+    --font-sm: 14px;
+    --font-md: 16px;
+    --font-lg: 20px;
+    --font-xl: 28px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0 40px 0 40px;
+}

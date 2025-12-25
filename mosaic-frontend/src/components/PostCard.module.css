@@ -1,0 +1,8 @@
+.cover {
+    aspect-ratio: 1 / 1;
+    width: 20%;
+}
+
+.cover:hover {
+    transform: scale(1.1);
+}
