@@ -1,5 +1,5 @@
 import {login} from '../api/auth'
-import {saveTokens} from '../store/auth'
+import {saveRole, saveTokens} from '../store/auth'
 import styles from './Register.module.css'
 import Button from "../components/Button/Button.tsx";
 import Input from "../components/Input/Input.tsx";
@@ -21,7 +21,6 @@ export default function Login() {
                 navigate('/')
             })
     }
-
 
     return (
         <div className={styles.wrapper}>
