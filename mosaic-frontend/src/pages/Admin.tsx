@@ -26,6 +26,14 @@ export default function Admin() {
         })
     }, [])
 
+    if (!access) {
+        return (
+            <div className={styles.alert}>
+                Требуются права администратора
+            </div>
+        )
+    }
+
     if (loading) {
         return <div className={styles.loader}>Загрузка...</div>;
     }
