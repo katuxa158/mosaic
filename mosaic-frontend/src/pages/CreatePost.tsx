@@ -41,8 +41,6 @@ export default function CreatePost() {
             data.append('content', content)
             data.append('image', imageFile)
 
-            console.log('Sending data:', { title, content, imageFile }) // debug
-
             await createPost(data)
 
             navigate('/')
@@ -57,13 +55,13 @@ export default function CreatePost() {
     return (
         <div className={layout.center} style={{minHeight: '100vh'}}>
             <Card>
-                <h1 className={typo.h1}>New post</h1>
-                <p className={typo.text}>Share a moment with Mosaic</p>
+                <h1 className={typo.h1}>Новый пост</h1>
+                <p className={typo.text}>Делитесь впечатлениями с Mosaic</p>
 
 
                 <form onSubmit={submit} className={layout.form}>
                     <Input
-                        placeholder="Title"
+                        placeholder="Название"
                         maxLength={128}
                         value={title}
                         onChange={e => setTitle(e.target.value)}
@@ -72,7 +70,7 @@ export default function CreatePost() {
 
 
                     <textarea
-                        placeholder="Content (max 256 chars)"
+                        placeholder="Текст поста (максимальное кол-то 256 символов)"
                         maxLength={256}
                         value={content}
                         onChange={e => setContent(e.target.value)}
@@ -103,7 +101,7 @@ export default function CreatePost() {
                         />
                     )}
                     <Button type="submit" disabled={loading || !imageFile}>
-                        {loading ? 'Publishing...' : 'Publish'}
+                        {loading ? 'Публикация...' : 'Опубликовать'}
                     </Button>
                 </form>
             </Card>
