@@ -6,19 +6,26 @@ import Card from "../components/Card/Card.tsx";
 
 import layout from '../styles/layout.module.css'
 import typography from '../styles/typography.module.css'
-import {NavLink} from "react-router-dom";
+import {NavLink, useNavigate} from "react-router-dom";
 
 export default function Register() {
+
+    const navigate = useNavigate();
+
     const submit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         const form = e.currentTarget
-
 
         register({
             username: form.username.value,
             full_name: form.full_name.value,
             password: form.password.value,
-        }).then(value => console.log(value))
+        }).then(value => {
+                if (value.status === 200) {
+                    navigate('/login')
+                }
+            }
+        )
             .catch(error => console.log(error));
     }
 
