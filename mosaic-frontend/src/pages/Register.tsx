@@ -39,7 +39,7 @@ export default function Register() {
                     <Input name="username" placeholder="Логин"/>
                     <Input name="password" placeholder="Пароль" type="password"/>
                     <Button>Зарегистрироваться</Button>
-                    <span>Уже есть профиль? <NavLink to="/login">Войдите</NavLink></span>
+                    <span>Уже есть профиль? <NavLink className={styles.nav} to="/login">Войдите</NavLink></span>
                 </form>
             </Card>
         </div>

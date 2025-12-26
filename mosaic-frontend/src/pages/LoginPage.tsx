@@ -30,7 +30,7 @@ export default function Login() {
                     <Input name="username" placeholder="Логин"/>
                     <Input name="password" placeholder="Пароль" type="password"/>
                     <Button>Войти</Button>
-                    <span>Нет профиля? <NavLink to="/register">Создайте</NavLink></span>
+                    <span>Нет профиля? <NavLink className={styles.nav} to="/register">Создайте</NavLink></span>
                 </form>
             </Card>
         </div>

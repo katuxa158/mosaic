@@ -22,7 +22,7 @@ export default function Profile() {
 
     return (
         <div>
-            <h2>{user.username}</h2>
+            <h2>{user.full_name}</h2>
             <img src={user.avatar}/>
             <Button onClick={() => navigate("/create")}>Добавить пост</Button>
             <h2>Мои посты</h2>

@@ -46,6 +46,14 @@
     border-color: #000000;
 }
 
+.nav {
+    color: var(--color-black);
+}
+
+.nav:hover {
+    color: var(--color-black);
+    text-decoration: underline;
+}
 
 .button {
     margin-top: 8px;
